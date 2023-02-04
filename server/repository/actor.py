@@ -11,8 +11,9 @@ class Actor(SQL):
             SELECT  *
             FROM actor
         """
-        return await self.db.execute(query)
-    
+        data = await self.db.fetch_all(query)
+        return data
+
     async def save_actor(self, data):
         """Save item."""
         
