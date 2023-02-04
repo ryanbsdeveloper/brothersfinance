@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ "$1" == "" ]; then
+    echo "Usage:"
+    echo
+    echo -e "\033[1;32m  $0 server \033[0m                - run API (dev)"
+    echo -e "\033[1;32m  $0 client \033[0m                - run app mobile (prod)"
+    echo
+    exit 0
+fi
+
+if [ "$1" == "server" ] || [ "$1" == "server/" ];then
+    cd server
+    uvicorn app:app --reload
+fi
+
+if [ "$1" == "client" ] || [ "$1" == "client/" ];then
+    cd client
+    npm start
+fi
