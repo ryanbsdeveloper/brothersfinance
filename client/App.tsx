@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 import { BottomMenu } from "./src/components/BottomMenu";
 import { Header } from "./src/components/Header";
+import { SimpleInput } from "./src/components/SimpleInput";
 
 export default function App() {
   return (
@@ -13,6 +14,10 @@ export default function App() {
         networkActivityIndicatorVisible={true}
       />
       <Header title="Objetivo" subtitle="1 de 4" />
+      <SimpleInput
+        label="Nome do objetivo"
+        placeholder="Ex: Viagem para o Canadá"
+      />
       <BottomMenu />
     </>
   );
