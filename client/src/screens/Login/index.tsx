@@ -4,7 +4,7 @@ import { ButtonFacebook } from "../../components/ButtonFacebook";
 import { Logo } from "../../components/Logo";
 import { styles } from "../../layout/session";
 
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 
 
 function Login() {

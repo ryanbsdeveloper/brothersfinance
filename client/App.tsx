@@ -1,7 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { StyleSheet } from "react-native";
 import { useFonts } from 'expo-font'
+import { Login } from "./src/screens/Login";
+import { Register } from "./src/screens/Register";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -21,11 +23,11 @@ export default function App() {
           headerShown: false,
         }}
       >
-        {/*
-        <Stack.Screen name="SignIn" component={} />
-        <Stack.Screen name="SignUp" component={} />
-        <Stack.Screen name="Home" component={} />
-        */}
+        
+        <Stack.Screen name="SignIn" component={Login} />
+        <Stack.Screen name="SignUp" component={Register} />
+        {/* <Stack.Screen name="Home" component={} /> */}
+       
       </Stack.Navigator>
     </NavigationContainer>
   );

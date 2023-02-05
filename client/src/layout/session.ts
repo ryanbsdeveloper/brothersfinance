@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
     fontWeight: '400'
   },
   footer: {
-    bottom: -120,
+    position: 'absolute',
+    top: '95%',
     width: '90%',
     display: "flex",
     flexDirection: "row",
