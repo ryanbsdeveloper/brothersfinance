@@ -1,10 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Header } from './src/components/Header';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet } from "react-native";
+import { BottomMenu } from "./src/components/BottomMenu";
+import { Header } from "./src/components/Header";
+import { SimpleInput } from "./src/components/SimpleInput";
+import { ButtonGoogle } from "./src/components/ButtonGoogle";
+import { ButtonFacebook } from "./src/components/ButtonFacebook";
 
 export default function App() {
   return (
-    <Header title='Objetivo' subtitle='1 de 4' />
+    <>
+      <StatusBar
+        hidden={false}
+        backgroundColor="#FFFFFF"
+        translucent={false}
+        networkActivityIndicatorVisible={true}
+      />
+      <ButtonGoogle
+        onPress={() => console.log('clique')}
+        title='Entrar com o Google' />
+      <ButtonFacebook
+        onPress={() => console.log('clique')}
+        title='Entrar com o Facebook'/>
+    </>
   );
 }
 
