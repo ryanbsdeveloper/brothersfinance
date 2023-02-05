@@ -1,35 +1,23 @@
-import { StatusBar } from "expo-status-bar";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
-import { BottomMenu } from "./src/components/BottomMenu";
-import { Header } from "./src/components/Header";
-import { SimpleInput } from "./src/components/SimpleInput";
-import { ButtonGoogle } from "./src/components/ButtonGoogle";
-import { ButtonFacebook } from "./src/components/ButtonFacebook";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <>
-      <StatusBar
-        hidden={false}
-        backgroundColor="#FFFFFF"
-        translucent={false}
-        networkActivityIndicatorVisible={true}
-      />
-      <ButtonGoogle
-        onPress={() => console.log('clique')}
-        title='Entrar com o Google' />
-      <ButtonFacebook
-        onPress={() => console.log('clique')}
-        title='Entrar com o Facebook'/>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        {/*
+        <Stack.Screen name="SignIn" component={} />
+        <Stack.Screen name="SignUp" component={} />
+        <Stack.Screen name="Home" component={} />
+        */}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
