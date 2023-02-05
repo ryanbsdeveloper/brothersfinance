@@ -7,11 +7,11 @@ interface IButton {
   title: string;
 }
 
-const ButtonGoogle = ({ onPress, title }: IButton) => {
+const ButtonFacebook = ({ onPress, title }: IButton) => {
   return (
     <Pressable onPress={onPress} style={styles.container}>
       <View style={styles.box}>
-          <Image style={styles.image} source={require("../../../assets/google.png")} />
+          <Image style={styles.image} source={require("../../../assets/facebook.png")} />
           <View>
             <Text style={styles.text}>{title}</Text>
           </View>
@@ -20,4 +20,4 @@ const ButtonGoogle = ({ onPress, title }: IButton) => {
   );
 };
 
-export { ButtonGoogle };
+export { ButtonFacebook };
