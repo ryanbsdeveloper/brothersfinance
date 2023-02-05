@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
+    marginVertical: 10,
     width: 345,
     height: 50,
     backgroundColor: "#1A1A1A",
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text: {
+    fontFamily: 'Lexend',
     fontWeight: "500",
     fontSize: 16,
     lineHeight: 20,
