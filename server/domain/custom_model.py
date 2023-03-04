@@ -1,7 +1,7 @@
 from typing import *
 from pydantic import BaseModel
 
-class Actor(BaseModel):
+class UserModel(BaseModel):
     name: str
     email: str
     photo: Optional[str]
