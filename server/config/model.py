@@ -6,6 +6,7 @@ from cassandra.cqlengine.models import Model
 from cassandra.cluster import Cluster
 from cassandra.cqlengine.management import sync_table
 from cassandra.cqlengine import connection
+from aiocassandra import aiosession
 from datetime import datetime
 
 
@@ -36,4 +37,4 @@ def main():
     
     session = cluster.connect()
     connection.register_connection('brothers_finance', session=session)
-    return session
+    return aiosession(session)
