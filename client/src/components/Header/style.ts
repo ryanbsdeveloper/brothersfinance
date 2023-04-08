@@ -9,8 +9,6 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     flexDirection: "row",
-
-    marginTop: 25,
     padding: 20,
   },
   content: {
